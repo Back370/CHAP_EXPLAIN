@@ -3,9 +3,11 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /* Do not set a global page background or hard-coded text color here.
+     App-specific styles (src/App.css) control the app theme and background.
+     Keeping color-scheme is fine, but avoid forcing colors that conflict
+     with component styles. */
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,8 +26,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* Keep a full-height body but don't force centering/layout here so
+     component-level styles (like #root / .policy-container) can control
+     positioning and background color. */
   min-width: 320px;
   min-height: 100vh;
 }
